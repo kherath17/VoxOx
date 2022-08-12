@@ -3,8 +3,8 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-08-10T15:17:42.849Z",
-        "line": 2,
+        "start_timestamp": "2022-08-12T10:16:44.301Z",
+        "line": 4,
         "name": "Checking if SignUp page is working properly",
         "description": "",
         "id": "testing-signup-page;checking-if-signup-page-is-working-properly",
@@ -13,10 +13,10 @@
         "steps": [
           {
             "result": {
-              "duration": 6316715500,
+              "duration": 12493755900,
               "status": "passed"
             },
-            "line": 3,
+            "line": 5,
             "name": "User to navigate the cloudphone.com",
             "match": {
               "location": "stepDefinitions.stepDefenitions.user_to_navigate_the_cloudphone_com()"
@@ -25,23 +25,23 @@
           },
           {
             "result": {
-              "duration": 4639188900,
+              "duration": 1878513300,
               "status": "passed"
             },
-            "line": 4,
-            "name": "User should be able to click the ShowMePricing button",
+            "line": 6,
+            "name": "User will click the ShowMePricing button",
             "match": {
               "location": "stepDefinitions.stepDefenitions.user_should_be_able_to_click_the_show_me_pricing_button()"
             },
-            "keyword": "Then "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 587481100,
+              "duration": 4208429900,
               "status": "passed"
             },
-            "line": 5,
-            "name": "User should be able to  choose the Plan and click GetStarted",
+            "line": 7,
+            "name": "User choose the Plan and click GetStarted",
             "match": {
               "location": "stepDefinitions.stepDefenitions.user_should_be_able_to_choose_the_plan_and_click_get_started()"
             },
@@ -49,63 +49,104 @@
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//select[@id\u003d\u0027npaCountryCode\u0027]\"}\n  (Session info: chrome\u003d104.0.5112.81)\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: \u00274.4.0\u0027, revision: \u0027e5c75ed026a\u0027\nSystem info: host: \u0027LAPTOP-3PHAH4O9\u0027, ip: \u002710.0.0.239\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.12\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [f7e73f079d5784954329576c384b6be0, findElement {using\u003dxpath, value\u003d//select[@id\u003d\u0027npaCountryCode\u0027]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\\Users\\18728\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50917}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50917/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: f7e73f079d5784954329576c384b6be0\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)\r\n\tat pageObjects.signUpPage.tollFreeNumber(signUpPage.java:27)\r\n\tat stepDefinitions.stepDefenitions.user_should_be_able_to_select_toll_free_number(stepDefenitions.java:27)\r\n\tat ✽.User should be able to select TollFreeNumber(file:///C:/Users/18728/Desktop/VoxOxAutomation/src/main/resources/featurefile.feature:6)\r\n",
-              "duration": 61512700,
-              "status": "failed"
+              "duration": 13090884800,
+              "status": "passed"
             },
-            "line": 6,
-            "name": "User should be able to select TollFreeNumber",
+            "line": 8,
+            "name": "User  able to select TollFreeNumber",
             "match": {
-              "location": "stepDefinitions.stepDefenitions.user_should_be_able_to_select_toll_free_number()"
+              "location": "stepDefinitions.stepDefenitions.userAbleToSelectTollFreeNumber()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 15593254400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User will select State,city,firstNumber and click continue",
+            "match": {
+              "location": "stepDefinitions.stepDefenitions.userShouldBeAbleToSelectStateCityFirstNumberandclickcontinue()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 281281000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User will enter FName,LName,CompName",
+            "match": {
+              "location": "stepDefinitions.stepDefenitions.userEnterDetails1()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 508397800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User will enter email,passwd,confirm passwd ,phone number",
+            "match": {
+              "location": "stepDefinitions.stepDefenitions.userEnterDetails2()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 500300,
-              "status": "skipped"
+              "duration": 14054707200,
+              "status": "passed"
             },
-            "line": 7,
-            "name": "User should be able to select State",
+            "line": 12,
+            "name": "User will check box to agree CP Term\u0026Conditions and click continue",
             "match": {
-              "location": "stepDefinitions.stepDefenitions.user_should_be_able_to_select_state()"
+              "location": "stepDefinitions.stepDefenitions.userConfirmnContinue()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1070300,
-              "status": "skipped"
+              "duration": 50284944800,
+              "status": "passed"
             },
-            "line": 8,
-            "name": "User should be able to select the city",
+            "line": 13,
+            "name": "User lands on Billing Info page and Enter Billing Addr and City",
             "match": {
-              "location": "stepDefinitions.stepDefenitions.user_should_be_able_to_select_the_city()"
+              "location": "stepDefinitions.stepDefenitions.userBillInfo1()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 8038558800,
+              "status": "passed"
             },
-            "line": 9,
-            "name": "User should be able to select the first Number on the list",
+            "line": 14,
+            "name": "User Enters Ccard name,number,expdate,secCode and click continue",
             "match": {
-              "location": "stepDefinitions.stepDefenitions.user_should_be_able_to_select_the_first_number_on_the_list()"
+              "location": "stepDefinitions.stepDefenitions.userBillInfo2()"
             },
-            "keyword": "Then "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 5500100,
-              "status": "skipped"
+              "duration": 28526530100,
+              "status": "passed"
             },
-            "line": 10,
-            "name": "user should be able to click the continue Button",
+            "line": 15,
+            "name": "User will be navigated to the new Account",
             "match": {
-              "location": "stepDefinitions.stepDefenitions.user_should_be_able_to_click_the_continue_button()"
+              "location": "stepDefinitions.stepDefenitions.userAccountCreated()"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SignUp"
           }
         ]
       }
@@ -115,6 +156,57 @@
     "id": "testing-signup-page",
     "keyword": "Feature",
     "uri": "file:src/main/resources/featurefile.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-08-12T10:19:13.322Z",
+        "line": 3,
+        "name": "Testing if User is able to SignIn",
+        "description": "",
+        "id": "signin-page;testing-if-user-is-able-to-signin",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 14772233500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is able to navigate the Sign in Page",
+            "match": {
+              "location": "stepDefinitions.stepDefinition_SignIN.userNavSignIn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6010449700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User should be navigated to logged in page",
+            "match": {
+              "location": "stepDefinitions.stepDefinition_SignIN.loginSucess()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SignIn"
+          }
+        ]
+      }
+    ],
+    "name": "SignIn Page",
+    "description": "",
+    "id": "signin-page",
+    "keyword": "Feature",
+    "uri": "file:src/main/resources/signIn.feature",
     "tags": []
   }
 ]

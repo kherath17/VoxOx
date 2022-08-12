@@ -15,8 +15,9 @@ import org.testng.annotations.BeforeClass;
         features = {"src/main/resources/"},
         glue = {
                 "stepDefinitions"
-        }
 
+        },
+        tags= "@SignUp or @SignIn"
 )
 public class testRunner  extends AbstractTestNGCucumberTests {
 

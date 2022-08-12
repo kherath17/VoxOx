@@ -1,7 +1,10 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.testng.Assert;
 import pageObjects.signUpPage;
 
 public class stepDefenitions {
@@ -12,41 +15,91 @@ public class stepDefenitions {
         sp.userNavCloudPhn();
     }
 
-    @Then("User should be able to click the ShowMePricing button")
+    @Then("User will click the ShowMePricing button")
     public void user_should_be_able_to_click_the_show_me_pricing_button() {
         sp.showMePricing();
     }
 
-    @Then("User should be able to  choose the Plan and click GetStarted")
+    @Then("User choose the Plan and click GetStarted")
     public void user_should_be_able_to_choose_the_plan_and_click_get_started() {
         sp.choosePlan();
     }
 
-    @Then("User should be able to select TollFreeNumber")
-    public void user_should_be_able_to_select_toll_free_number() throws InterruptedException {
-        sp.tollFreeNumber();
+
+    @When("User  able to select TollFreeNumber")
+    public void userAbleToSelectTollFreeNumber() throws InterruptedException {
+        sp.TollFreeNumber();
     }
 
-    @Then("User should be able to select State")
-    public void user_should_be_able_to_select_state() {
-        sp.stateCode();
+    @Then("User will select State,city,firstNumber and click continue")
+    public void userShouldBeAbleToSelectStateCityFirstNumberandclickcontinue() throws InterruptedException {
+        sp.stateCityFirstNumber();
+    }
+
+
+    @Then("User will enter FName,LName,CompName")
+    public void userEnterDetails1() {
+        sp.accountInfo1();
 
     }
 
-    @Then("User should be able to select the city")
-    public void user_should_be_able_to_select_the_city() {
-        sp.selectTheCity();
+    @And("User will enter email,passwd,confirm passwd ,phone number")
+    public void userEnterDetails2() {
+        sp.accountInfo2();
+    }
+
+    @Then("User will check box to agree CP Term&Conditions and click continue")
+    public void userConfirmnContinue() throws InterruptedException {
+        sp.accountInfo3();
 
     }
 
-    @Then("User should be able to select the first Number on the list")
-    public void user_should_be_able_to_select_the_first_number_on_the_list() {
-        sp.selectNumber();
+
+
+    @Then("User lands on Billing Info page and Enter Billing Addr and City")
+    public void userBillInfo1() throws InterruptedException {
+
+        Assert.assertTrue(sp.checkBillPage().contains("Billing Info"));
+        sp.billingAdressInfo1();
+
+
+
     }
 
-    @Then("user should be able to click the continue Button")
-    public void user_should_be_able_to_click_the_continue_button() {
-        sp.clickContinue();
+    @And("User Enters Ccard name,number,expdate,secCode and click continue")
+    public void userBillInfo2() throws InterruptedException {
+        sp.billingAdressInfo2();
+    }
+
+    @Then("User will be navigated to the new Account")
+    public void userAccountCreated() throws InterruptedException {
+      Assert.assertTrue(sp.checkAccountCreated().contains("Text Dashboard"));
+
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
