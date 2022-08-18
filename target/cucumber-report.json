@@ -3,166 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-08-12T10:16:44.301Z",
-        "line": 4,
-        "name": "Checking if SignUp page is working properly",
-        "description": "",
-        "id": "testing-signup-page;checking-if-signup-page-is-working-properly",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 12493755900,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "User to navigate the cloudphone.com",
-            "match": {
-              "location": "stepDefinitions.stepDefenitions.user_to_navigate_the_cloudphone_com()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1878513300,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "User will click the ShowMePricing button",
-            "match": {
-              "location": "stepDefinitions.stepDefenitions.user_should_be_able_to_click_the_show_me_pricing_button()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 4208429900,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "User choose the Plan and click GetStarted",
-            "match": {
-              "location": "stepDefinitions.stepDefenitions.user_should_be_able_to_choose_the_plan_and_click_get_started()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 13090884800,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "User  able to select TollFreeNumber",
-            "match": {
-              "location": "stepDefinitions.stepDefenitions.userAbleToSelectTollFreeNumber()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 15593254400,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "User will select State,city,firstNumber and click continue",
-            "match": {
-              "location": "stepDefinitions.stepDefenitions.userShouldBeAbleToSelectStateCityFirstNumberandclickcontinue()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 281281000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "User will enter FName,LName,CompName",
-            "match": {
-              "location": "stepDefinitions.stepDefenitions.userEnterDetails1()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 508397800,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "User will enter email,passwd,confirm passwd ,phone number",
-            "match": {
-              "location": "stepDefinitions.stepDefenitions.userEnterDetails2()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 14054707200,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "User will check box to agree CP Term\u0026Conditions and click continue",
-            "match": {
-              "location": "stepDefinitions.stepDefenitions.userConfirmnContinue()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 50284944800,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "User lands on Billing Info page and Enter Billing Addr and City",
-            "match": {
-              "location": "stepDefinitions.stepDefenitions.userBillInfo1()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 8038558800,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "User Enters Ccard name,number,expdate,secCode and click continue",
-            "match": {
-              "location": "stepDefinitions.stepDefenitions.userBillInfo2()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 28526530100,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "User will be navigated to the new Account",
-            "match": {
-              "location": "stepDefinitions.stepDefenitions.userAccountCreated()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@SignUp"
-          }
-        ]
-      }
-    ],
-    "name": "Testing SignUp Page",
-    "description": "",
-    "id": "testing-signup-page",
-    "keyword": "Feature",
-    "uri": "file:src/main/resources/featurefile.feature",
-    "tags": []
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "start_timestamp": "2022-08-12T10:19:13.322Z",
+        "start_timestamp": "2022-08-18T15:07:13.733Z",
         "line": 3,
         "name": "Testing if User is able to SignIn",
         "description": "",
@@ -172,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 14772233500,
+              "duration": 16141279100,
               "status": "passed"
             },
             "line": 5,
@@ -184,7 +25,19 @@
           },
           {
             "result": {
-              "duration": 6010449700,
+              "duration": 21523594400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User enters username , password and click login",
+            "match": {
+              "location": "stepDefinitions.stepDefinition_SignIN.userEnterCred()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6068996000,
               "status": "passed"
             },
             "line": 7,
@@ -193,6 +46,18 @@
               "location": "stepDefinitions.stepDefinition_SignIN.loginSucess()"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2883591900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should be able signOut the  page and verify landed page is correct",
+            "match": {
+              "location": "stepDefinitions.stepDefinition_SignIN.userShouldBeAbleSignOutThePageAndVerifyLandedPageIsCorrect()"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [

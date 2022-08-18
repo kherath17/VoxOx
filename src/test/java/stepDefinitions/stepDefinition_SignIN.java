@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,12 +16,20 @@ public class stepDefinition_SignIN {
     }
 
     @When("User enters username , password and click login")
-    public void userEnterCred() throws InterruptedException {
+    public void userEnterCred(String usr,String pwd) throws InterruptedException {
         sp.enterCred();
     }
 
     @Then("User should be navigated to logged in page")
     public void loginSucess() throws InterruptedException {
-        Assert.assertTrue(sp.checkLogeedIn().contains("Text Dashboard"));
+        Assert.assertTrue(sp.checkLogeedIn().contains("Sara Motty"));
+
+    }
+
+    @And("User should be able signOut the  page and verify landed page is correct")
+    public void userShouldBeAbleSignOutThePageAndVerifyLandedPageIsCorrect() {
+        Assert.assertEquals(sp.signOut(),"Login");
+
+
     }
 }

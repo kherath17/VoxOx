@@ -17,7 +17,9 @@ import org.testng.annotations.BeforeClass;
                 "stepDefinitions"
 
         },
-        tags= "@SignUp or @SignIn"
+       //tags= "@SignUp"
+        tags=" @SignIn"
+        //tags="@addNum"
 )
 public class testRunner  extends AbstractTestNGCucumberTests {
 
