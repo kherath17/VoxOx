@@ -17,18 +17,17 @@ import org.testng.annotations.BeforeClass;
                 "stepDefinitions"
 
         },
-       //tags= "@SignUp"
-        tags=" @SignIn"
-        //tags="@addNum"
+        //tags= "@SignUp"
+        //tags=" @SignIn"
+        tags="@addNum"
 )
 public class testRunner  extends AbstractTestNGCucumberTests {
-
         @BeforeClass
         public void fireDriver(){
-                base.baseSetUp();
+                base.baseSetUp("chrome");
         }
         @AfterClass
         public void tearDown(){
-                base.tearDown();
+
         }
 }

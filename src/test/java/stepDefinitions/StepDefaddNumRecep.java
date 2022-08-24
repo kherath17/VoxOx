@@ -1,4 +1,5 @@
 package stepDefinitions;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,45 +10,55 @@ import pageObjects.addNumRecepPage;
 public class StepDefaddNumRecep {
     addNumRecepPage addNum = new addNumRecepPage();
 
-    @Given("User should be able  land CloudPhone.com and SignIn")
-    public void userShouldBeAbleLandCloudPhoneComAndSignIn() throws InterruptedException {
-       //addNum.userLandCloudPhn();
-        Assert.assertTrue(addNum.userLandCloudPhn().contains("Sara Motty"));
+    @Given("User should be able  land CloudPhone.com and SignIn using {string},{string}")
+    public void userShouldBeAbleLandCloudPhoneComAndSignIn(String usr, String pwd) throws InterruptedException {
+        Assert.assertTrue(addNum.userLandCloudPhn(usr, pwd).contains("Kayala Musayeva"));
     }
+
     @When("User click Rectionis,selecting ViewRecept and Validate the page")
     public void userClickRectionisSelectingViewReceptAndValidateThePage() throws InterruptedException {
-       // addNum.clickRepselectViewRecep();
-       Assert.assertEquals(addNum.clickRepselectViewRecep(),"Receptionist");
+        Assert.assertEquals(addNum.clickRepselectViewRecep(), "Receptionist");//this is fixed 08/23/2022 was receptionist
     }
 
 
     @Then("User should be able to  click AddRecep-ist Button")
     public void userShouldBeAbleToClickAddRecepIstButton() throws InterruptedException {
-        //addNum.clickAddRec();
-        //Assert.assertEquals(addNum.clickAddRec(),"Automated Receptionist");
         Assert.assertTrue(addNum.clickAddRec().contains("AUTOMATED RECEPTIONIST"));
     }
-        @And("User able clean the greeting box and write new Greeting")
-        public void userAbleCleanTheGreetingBoxAndWriteNewGreeting() throws InterruptedException {
-    addNum.Modify();
+
+    @And("User able clean the greeting box and write new {string}")
+    public void userAbleCleanTheGreetingBoxAndWriteNewGreeting(String greeting) throws InterruptedException {
+        addNum.Modify(greeting);
     }
 
     @And("User should be able to click the saveChanges button")
     public void userShouldBeAbleToClickTheSaveChangesButton() throws InterruptedException {
-   addNum.saveChanges();
+        addNum.saveChanges();
     }
+
     @Then("User again click the View Recepst and find AddedRecep")
     public void userAgainClickTheViewRecepstAndFindAddedRecep() throws InterruptedException {
-   //addNum.clickviewRecep();
-        Assert.assertEquals(addNum.clickviewRecep(),"Receptionist");
+        //Assert.assertEquals(addNum.clickviewRecep(), "Receptionist");
+        addNum.clickviewRecep();
     }
 
     @And("Also  User checks that Greeting message is there.")
     public void alsoUserChecksThatGreetingMessageIsThere() throws InterruptedException {
-       // addNum.validateGreeting();
-        Assert.assertEquals(addNum.validateGreeting(),"Welcome Cloud phone.com");
-        }
+        Assert.assertEquals(addNum.validateGreeting(), "Welcome Cloud phone.com");
+    }
+
+
+    @Then("User is able to delete the last Receptionist and vrf Deleted")
+    public void userIsAbleToDeleteTheLastReceptionistAndVrfDeleted() throws InterruptedException {
+        Assert.assertEquals(addNum.deleteRecep(), true);
+    }
+
+
 }
+
+
+
+
 
 
 

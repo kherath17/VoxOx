@@ -3,75 +3,139 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-08-18T15:07:13.733Z",
-        "line": 3,
-        "name": "Testing if User is able to SignIn",
+        "start_timestamp": "2022-08-24T14:55:48.955Z",
+        "line": 15,
+        "name": "Checking if  phone number can be added to AutoReception",
         "description": "",
-        "id": "signin-page;testing-if-user-is-able-to-signin",
+        "id": "testing-add-number-to-receptionist.;checking-if--phone-number-can-be-added-to-autoreception;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 16141279100,
+              "duration": 29061509400,
               "status": "passed"
             },
             "line": 5,
-            "name": "User is able to navigate the Sign in Page",
+            "name": "User should be able  land CloudPhone.com and SignIn using \"KhayalaTest376@tcoff.net\",\"qwerty\"",
             "match": {
-              "location": "stepDefinitions.stepDefinition_SignIN.userNavSignIn()"
+              "arguments": [
+                {
+                  "val": "\"KhayalaTest376@tcoff.net\"",
+                  "offset": 58
+                },
+                {
+                  "val": "\"qwerty\"",
+                  "offset": 85
+                }
+              ],
+              "location": "stepDefinitions.StepDefaddNumRecep.userShouldBeAbleLandCloudPhoneComAndSignIn(java.lang.String,java.lang.String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 21523594400,
+              "duration": 9115083900,
               "status": "passed"
             },
             "line": 6,
-            "name": "User enters username , password and click login",
+            "name": "User click Rectionis,selecting ViewRecept and Validate the page",
             "match": {
-              "location": "stepDefinitions.stepDefinition_SignIN.userEnterCred()"
+              "location": "stepDefinitions.StepDefaddNumRecep.userClickRectionisSelectingViewReceptAndValidateThePage()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 6068996000,
+              "duration": 22652021700,
               "status": "passed"
             },
             "line": 7,
-            "name": "User should be navigated to logged in page",
+            "name": "User should be able to  click AddRecep-ist Button",
             "match": {
-              "location": "stepDefinitions.stepDefinition_SignIN.loginSucess()"
+              "location": "stepDefinitions.StepDefaddNumRecep.userShouldBeAbleToClickAddRecepIstButton()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 2883591900,
+              "duration": 2360784300,
               "status": "passed"
             },
             "line": 8,
-            "name": "User should be able signOut the  page and verify landed page is correct",
+            "name": "User able clean the greeting box and write new \"Welcome Cloud phone.com\"",
             "match": {
-              "location": "stepDefinitions.stepDefinition_SignIN.userShouldBeAbleSignOutThePageAndVerifyLandedPageIsCorrect()"
+              "arguments": [
+                {
+                  "val": "\"Welcome Cloud phone.com\"",
+                  "offset": 47
+                }
+              ],
+              "location": "stepDefinitions.StepDefaddNumRecep.userAbleCleanTheGreetingBoxAndWriteNewGreeting(java.lang.String)"
             },
             "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1106499000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User should be able to click the saveChanges button",
+            "match": {
+              "location": "stepDefinitions.StepDefaddNumRecep.userShouldBeAbleToClickTheSaveChangesButton()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3581106600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User again click the View Recepst and find AddedRecep",
+            "match": {
+              "location": "stepDefinitions.StepDefaddNumRecep.userAgainClickTheViewRecepstAndFindAddedRecep()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3538631500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Also  User checks that Greeting message is there.",
+            "match": {
+              "location": "stepDefinitions.StepDefaddNumRecep.alsoUserChecksThatGreetingMessageIsThere()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13582924000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User is able to delete the last Receptionist and vrf Deleted",
+            "match": {
+              "location": "stepDefinitions.StepDefaddNumRecep.userIsAbleToDeleteTheLastReceptionistAndVrfDeleted()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@SignIn"
+            "name": "@addNum"
           }
         ]
       }
     ],
-    "name": "SignIn Page",
+    "name": "Testing Add Number to Receptionist.",
     "description": "",
-    "id": "signin-page",
+    "id": "testing-add-number-to-receptionist.",
     "keyword": "Feature",
-    "uri": "file:src/main/resources/signIn.feature",
+    "uri": "file:src/main/resources/addNumRecep.feature",
     "tags": []
   }
 ]
