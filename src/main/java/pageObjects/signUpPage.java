@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class signUpPage {
+
     WebDriver driver = base.driver;
     By signUpTod = By.xpath("//a[@id='signupLink']");
     By signUpvrf = By.xpath("//h1[text()='Signup']");
@@ -22,7 +23,7 @@ public class signUpPage {
     By stateCode = By.xpath("//select[@id='stateCode']");
     By valueCA = By.xpath("//option[@value='CA']");
     By areaCod = By.xpath("//select[@id='areaCode']");
-    By areaCodOption = By.xpath("//select[@id='areaCode']/option");
+    By areaCodOption = By.xpath("//select[@id='areaCode']/option");   //select[@id='areaCode']/option[2]
     By virtualNumResult = By.xpath("(//ul[@id='virtualNumbersResult']/li)[1]");
     By submit = By.xpath("//button[@type='submit']");
     By creatAcct = By.xpath("//section[@class='col-xs-12 col-sm-12 c-onboard__signup--form c-onboard__form  signup-form']/h2");
@@ -67,11 +68,12 @@ public class signUpPage {
 
     //Select country code
     public String TollFreeNumber() throws InterruptedException {
-        Thread.sleep(5000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
         driver.findElement(countrtCod).click();
-        Thread.sleep(5000);
+        WebDriverWait wait1= new WebDriverWait(driver,Duration.ofSeconds(50));
+        wait1.until(ExpectedConditions.visibilityOf(driver.findElement(valueUSA)));
         String TollFree = driver.findElement(valueUSA).getText();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.findElement(valueUSA).click();
         Thread.sleep(2800);
         return TollFree;
@@ -81,14 +83,14 @@ public class signUpPage {
     public boolean stateCityFirstNumber() throws InterruptedException {
         driver.findElement(stateCode).click();
         driver.findElement(valueCA).click();
-        Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.findElement(areaCod).click();
-        Thread.sleep(1500);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         List<WebElement> ele1 = driver.findElements(areaCodOption);
         ele1.get(2).click();
-        Thread.sleep(4500);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(45));
         driver.findElement(virtualNumResult).click();
-        Thread.sleep(2500);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
         boolean buttonClickable = driver.findElement(submit).isEnabled();
         driver.findElement(submit).click();
         Thread.sleep(3500);
@@ -121,10 +123,11 @@ public class signUpPage {
 
     //Tick terms & condition
     public String accountInfo3() throws InterruptedException {
-        Thread.sleep(2500);
+        WebDriverWait wait2= new WebDriverWait(driver,Duration.ofSeconds(25));
+        wait2.until(ExpectedConditions.visibilityOf(driver.findElement(termsCond)));
         String termsCondition = driver.findElement(termsCond).getText();
         driver.findElement(agree).click();
-        Thread.sleep(3200);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(32));
         Actions at = new Actions(driver);
         at.doubleClick(driver.findElement(submitPersInfo));
         at.build().perform();
@@ -165,69 +168,42 @@ public class signUpPage {
         List<WebElement> ele3 = driver.findElements(expMonthOption);
         ele3.get(Integer.parseInt(expM)).click();
         Thread.sleep(2300);
-        //Exp Year
         driver.findElement(expYear).click();
         List<WebElement> ele4 = driver.findElements(expYearOption);
         ele4.get(Integer.parseInt(expY)).click();
-        //Security Code
         driver.findElement(enterCVV).clear();
         driver.findElement(enterCVV).sendKeys(SVV);
         Thread.sleep(5000);
-        //CreateMyAccount button click
+
         driver.findElement(submitInfo).click();
     }
 
 
     public String checkAccountCreated() throws InterruptedException {
-        Thread.sleep(20000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         Actions at = new Actions(driver);
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         at.sendKeys(Keys.ESCAPE);
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         at.sendKeys(Keys.ESCAPE);
         at.build().perform();
-        Thread.sleep(2500);
-        //08/23/2022 Xpath needs to be fixed
-        String accountPageVrf = driver.findElement(By.xpath("//*[@id=main]/div/div/section/div/div[1]/article[1]/h2")).getText();
+        Thread.sleep(6000);
+        WebDriverWait wait4 = new WebDriverWait(driver,Duration.ofSeconds(120));
+        wait4.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//article[@class='textToJoin spark-box']/h2"))));
+        String accountPageVrf = driver.findElement(By.xpath("//article[@class='textToJoin spark-box']/h2")).getText();
         return accountPageVrf;
     }
 
     public String signOut() throws InterruptedException {
         Thread.sleep(2800);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(28));
         driver.findElement(clickUserName).click();
-        Thread.sleep(1200);
         driver.findElement(clickLogOut).click();
+        WebDriverWait wait5= new WebDriverWait(driver,Duration.ofSeconds(60));
+        wait5.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//h1[text()='Login']"))));
         String vrfSucsesSignedOut = driver.findElement(By.xpath("//h1[text()='Login']")).getText();
         return vrfSucsesSignedOut;
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

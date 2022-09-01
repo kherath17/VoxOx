@@ -3,6 +3,8 @@ package pageObjects;
 import baseSetUp.base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
@@ -13,7 +15,7 @@ public class signInPage {
     By enterUserName = By.xpath("//input[@id='username']");
     By enterPwd = By.xpath("//input[@id='password']");
     By submitButton = By.xpath("//button[@id='submitButton']");
-    By vrfSaraMotty = By.xpath("//span[text()='Kayala Musayeva']");
+    By vrfKhayalaMusa = By.xpath("//span[text()='Kayala Musayeva']");
     By clickUserNameSignOut = By.xpath("//span[@class='user-name']");
     By clickLogOut = By.xpath("//a[@class=' logout']");
     By vrfLogOut = By.xpath("//div[@class='col-xs-12']/h1");
@@ -34,10 +36,12 @@ public class signInPage {
     }
 
     public String checkLogeedIn() throws InterruptedException {
-        Thread.sleep(6000);
-        String userVerify = driver.findElement(vrfSaraMotty).getText();
+        WebDriverWait wait1= new WebDriverWait(driver,Duration.ofSeconds(60));
+        wait1.until(ExpectedConditions.visibilityOf(driver.findElement(vrfKhayalaMusa)));
+        String userVerify = driver.findElement(vrfKhayalaMusa).getText();
         return userVerify;
     }
+
 
     public String signOut() {
         driver.findElement(clickUserNameSignOut).click();
@@ -46,4 +50,33 @@ public class signInPage {
         return logout;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

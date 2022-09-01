@@ -3,139 +3,181 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-08-24T14:55:48.955Z",
-        "line": 15,
-        "name": "Checking if  phone number can be added to AutoReception",
+        "start_timestamp": "2022-09-01T05:29:00.596Z",
+        "line": 76,
+        "name": "Checking if IndoSat SignUp page is working properly",
         "description": "",
-        "id": "testing-add-number-to-receptionist.;checking-if--phone-number-can-be-added-to-autoreception;;2",
+        "id": "testing-signup-page;checking-if-indosat-signup-page-is-working-properly;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 29061509400,
+              "duration": 9158709100,
               "status": "passed"
             },
-            "line": 5,
-            "name": "User should be able  land CloudPhone.com and SignIn using \"KhayalaTest376@tcoff.net\",\"qwerty\"",
+            "line": 60,
+            "name": "Indo User to navigate the landingPage",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"KhayalaTest376@tcoff.net\"",
-                  "offset": 58
-                },
-                {
-                  "val": "\"qwerty\"",
-                  "offset": 85
-                }
-              ],
-              "location": "stepDefinitions.StepDefaddNumRecep.userShouldBeAbleLandCloudPhoneComAndSignIn(java.lang.String,java.lang.String)"
+              "location": "stepDefinitions.stepDefinition_Indosat.indo_user_to_navigate_the_landing_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 9115083900,
+              "duration": 1576021200,
               "status": "passed"
             },
-            "line": 6,
-            "name": "User click Rectionis,selecting ViewRecept and Validate the page",
+            "line": 61,
+            "name": "Indo User will click the SignUpToday button",
             "match": {
-              "location": "stepDefinitions.StepDefaddNumRecep.userClickRectionisSelectingViewReceptAndValidateThePage()"
+              "location": "stepDefinitions.stepDefinition_Indosat.indo_userWillClickTheSignUpTodayButton()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 22652021700,
+              "duration": 88643696600,
               "status": "passed"
             },
-            "line": 7,
-            "name": "User should be able to  click AddRecep-ist Button",
+            "line": 62,
+            "name": "Indo User will select State,city,firstNum and click continue",
             "match": {
-              "location": "stepDefinitions.StepDefaddNumRecep.userShouldBeAbleToClickAddRecepIstButton()"
+              "location": "stepDefinitions.stepDefinition_Indosat.indo_userWillSelectStateCityFirstNumAndClickContinue()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 2360784300,
+              "duration": 729440700,
               "status": "passed"
             },
-            "line": 8,
-            "name": "User able clean the greeting box and write new \"Welcome Cloud phone.com\"",
+            "line": 63,
+            "name": "Indo User will enter \"Khayala_Indo\",\"Musayeva_Indo\",\"voxOx\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Welcome Cloud phone.com\"",
-                  "offset": 47
+                  "val": "\"Khayala_Indo\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"Musayeva_Indo\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"voxOx\"",
+                  "offset": 52
                 }
               ],
-              "location": "stepDefinitions.StepDefaddNumRecep.userAbleCleanTheGreetingBoxAndWriteNewGreeting(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1106499000,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "User should be able to click the saveChanges button",
-            "match": {
-              "location": "stepDefinitions.StepDefaddNumRecep.userShouldBeAbleToClickTheSaveChangesButton()"
+              "location": "stepDefinitions.stepDefinition_Indosat.indo_user_will_enter(java.lang.String,java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 3581106600,
+              "duration": 677271200,
               "status": "passed"
             },
-            "line": 10,
-            "name": "User again click the View Recepst and find AddedRecep",
+            "line": 64,
+            "name": "Indo User will enter \"KhayalaTestIndo\",\"qwerty\",\"qwerty\",\"6253520151\"",
             "match": {
-              "location": "stepDefinitions.StepDefaddNumRecep.userAgainClickTheViewRecepstAndFindAddedRecep()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3538631500,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "Also  User checks that Greeting message is there.",
-            "match": {
-              "location": "stepDefinitions.StepDefaddNumRecep.alsoUserChecksThatGreetingMessageIsThere()"
+              "arguments": [
+                {
+                  "val": "\"KhayalaTestIndo\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"qwerty\"",
+                  "offset": 39
+                },
+                {
+                  "val": "\"qwerty\"",
+                  "offset": 48
+                },
+                {
+                  "val": "\"6253520151\"",
+                  "offset": 57
+                }
+              ],
+              "location": "stepDefinitions.stepDefinition_Indosat.indo_user_will_enter(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 13582924000,
+              "duration": 26965799900,
               "status": "passed"
             },
-            "line": 12,
-            "name": "User is able to delete the last Receptionist and vrf Deleted",
+            "line": 65,
+            "name": "Indo User will check box to agree CP Term\u0026Conditions and click continue",
             "match": {
-              "location": "stepDefinitions.StepDefaddNumRecep.userIsAbleToDeleteTheLastReceptionistAndVrfDeleted()"
+              "location": "stepDefinitions.stepDefinition_Indosat.indo_user_will_check_box_to_agree_cp_term_conditions_and_click_continue()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 78310733600,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "Indo User Enters \"Robert Peter Hertz\",\"4000000000000044\",\"123\",\"03\",\"33\",\"123456\" and click continue",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Robert Peter Hertz\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"4000000000000044\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"123\"",
+                  "offset": 57
+                },
+                {
+                  "val": "\"03\"",
+                  "offset": 63
+                },
+                {
+                  "val": "\"33\"",
+                  "offset": 68
+                },
+                {
+                  "val": "\"123456\"",
+                  "offset": 73
+                }
+              ],
+              "location": "stepDefinitions.stepDefinition_Indosat.indo_userEntersExpdateAndClickContinue(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51041700,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "Indo User will be navigated to the new Account Landing Page",
+            "match": {
+              "location": "stepDefinitions.stepDefinition_Indosat.indo_userNewAcc()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@addNum"
+            "name": "@SignUp_Indosat"
           }
         ]
       }
     ],
-    "name": "Testing Add Number to Receptionist.",
+    "name": "Testing SignUp Page",
     "description": "",
-    "id": "testing-add-number-to-receptionist.",
+    "id": "testing-signup-page",
     "keyword": "Feature",
-    "uri": "file:src/main/resources/addNumRecep.feature",
+    "uri": "file:src/main/resources/signUp.feature",
     "tags": []
   }
 ]

@@ -17,9 +17,13 @@ import org.testng.annotations.BeforeClass;
                 "stepDefinitions"
 
         },
-        //tags= "@SignUp"
+        //tags= "@SignUp_Lando"
         //tags=" @SignIn"
-        tags="@addNum"
+        // tags="@addNum"
+        //tags="@SignUp_Omni"
+        //tags="@SignUp_Exis"
+        tags="@SignUp_Indosat"
+       //tags="@SignUp_Ring"
 )
 public class testRunner  extends AbstractTestNGCucumberTests {
         @BeforeClass
@@ -28,6 +32,6 @@ public class testRunner  extends AbstractTestNGCucumberTests {
         }
         @AfterClass
         public void tearDown(){
-
+// where is the driver quit ???
         }
 }
